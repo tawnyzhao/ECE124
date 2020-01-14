@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicalStep_Lab1_top
-Tue Jan 14 15:27:57 2020
+Tue Jan 14 16:13:28 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -44,13 +44,13 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 14 15:27:57 2020           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 14 16:13:28 2020           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_Lab1_top                            ;
 ; Top-level Entity Name              ; LogicalStep_Lab1_top                            ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 43                                              ;
-;     Total combinational functions  ; 43                                              ;
+; Total logic elements               ; 44                                              ;
+;     Total combinational functions  ; 44                                              ;
 ;     Dedicated logic registers      ; 28                                              ;
 ; Total registers                    ; 28                                              ;
 ; Total pins                         ; 15                                              ;
@@ -174,6 +174,8 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
 ; schem_gates.bdf                  ; yes             ; User Block Diagram/Schematic File        ; N:/ECE-124/Lab1/schem_gates.bdf                                                 ;         ;
 ; output_files/VHDL_gates.vhd      ; yes             ; User VHDL File                           ; N:/ECE-124/Lab1/output_files/VHDL_gates.vhd                                     ;         ;
+; schem_polar.bdf                  ; yes             ; User Block Diagram/Schematic File        ; N:/ECE-124/Lab1/schem_polar.bdf                                                 ;         ;
+; POLARITY_gates.vhd               ; yes             ; User VHDL File                           ; N:/ECE-124/Lab1/POLARITY_gates.vhd                                              ;         ;
 ; logicalstep_lab1_top.bdf         ; yes             ; Auto-Found Block Diagram/Schematic File  ; N:/ECE-124/Lab1/logicalstep_lab1_top.bdf                                        ;         ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                             ; c:/software/altera/15.1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/software/altera/15.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
@@ -195,16 +197,16 @@ agreement for further details.
 +---------------------------------------------+-------------------------------------------------------+
 ; Resource                                    ; Usage                                                 ;
 +---------------------------------------------+-------------------------------------------------------+
-; Estimated Total logic elements              ; 43                                                    ;
+; Estimated Total logic elements              ; 44                                                    ;
 ;                                             ;                                                       ;
-; Total combinational functions               ; 43                                                    ;
+; Total combinational functions               ; 44                                                    ;
 ; Logic element usage by number of LUT inputs ;                                                       ;
 ;     -- 4 input functions                    ; 12                                                    ;
 ;     -- 3 input functions                    ; 0                                                     ;
-;     -- <=2 input functions                  ; 31                                                    ;
+;     -- <=2 input functions                  ; 32                                                    ;
 ;                                             ;                                                       ;
 ; Logic elements by mode                      ;                                                       ;
-;     -- normal mode                          ; 15                                                    ;
+;     -- normal mode                          ; 16                                                    ;
 ;     -- arithmetic mode                      ; 28                                                    ;
 ;                                             ;                                                       ;
 ; Total registers                             ; 28                                                    ;
@@ -217,7 +219,7 @@ agreement for further details.
 ;                                             ;                                                       ;
 ; Maximum fan-out node                        ; lpm_counter:inst6|cntr_luj:auto_generated|cout_actual ;
 ; Maximum fan-out                             ; 28                                                    ;
-; Total fan-out                               ; 269                                                   ;
+; Total fan-out                               ; 271                                                   ;
 ; Average fan-out                             ; 2.66                                                  ;
 +---------------------------------------------+-------------------------------------------------------+
 
@@ -227,8 +229,8 @@ agreement for further details.
 +---------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                            ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+--------------+
-; |LogicalStep_Lab1_top           ; 43 (1)            ; 28 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |LogicalStep_Lab1_top                                                          ; work         ;
-;    |VHDL_gates:inst5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab1_top|VHDL_gates:inst5                                         ; work         ;
+; |LogicalStep_Lab1_top           ; 44 (2)            ; 28 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |LogicalStep_Lab1_top                                                          ; work         ;
+;    |POLARITY_gates:inst4|       ; 3 (3)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab1_top|POLARITY_gates:inst4                                     ; work         ;
 ;    |lpm_counter:inst6|          ; 39 (0)            ; 28 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab1_top|lpm_counter:inst6                                        ; work         ;
 ;       |cntr_luj:auto_generated| ; 39 (30)           ; 28 (28)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab1_top|lpm_counter:inst6|cntr_luj:auto_generated                ; work         ;
 ;          |cmpr_6tb:cmpr1|       ; 9 (9)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab1_top|lpm_counter:inst6|cntr_luj:auto_generated|cmpr_6tb:cmpr1 ; work         ;
@@ -286,17 +288,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 15                          ;
 ; cycloneiii_ff         ; 28                          ;
 ;     CLR SLD           ; 28                          ;
-; cycloneiii_lcell_comb ; 44                          ;
+; cycloneiii_lcell_comb ; 45                          ;
 ;     arith             ; 28                          ;
 ;         2 data inputs ; 28                          ;
-;     normal            ; 16                          ;
+;     normal            ; 17                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
 ;         4 data inputs ; 12                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.80                        ;
-; Average LUT depth     ; 3.34                        ;
+; Average LUT depth     ; 3.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -315,7 +317,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Tue Jan 14 15:27:42 2020
+    Info: Processing started: Tue Jan 14 16:13:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab1 -c LogicalStep_Lab1_top
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file schem_gates.bdf
@@ -323,6 +325,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file schem_g
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/vhdl_gates.vhd
     Info (12022): Found design unit 1: VHDL_gates-simple_gates File: N:/ECE-124/Lab1/output_files/VHDL_gates.vhd Line: 12
     Info (12023): Found entity 1: VHDL_gates File: N:/ECE-124/Lab1/output_files/VHDL_gates.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file schem_polar.bdf
+    Info (12023): Found entity 1: schem_polar
+Warning (12019): Can't analyze file -- file LogicalStep_Lab1_top_POLARITYDEMO.bdf is missing
+Info (12021): Found 2 design units, including 1 entities, in source file polarity_gates.vhd
+    Info (12022): Found design unit 1: POLARITY_gates-simple_gates File: N:/ECE-124/Lab1/POLARITY_gates.vhd Line: 12
+    Info (12023): Found entity 1: POLARITY_gates File: N:/ECE-124/Lab1/POLARITY_gates.vhd Line: 5
 Warning (12125): Using design file logicalstep_lab1_top.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: LogicalStep_Lab1_top
 Info (12127): Elaborating entity "LogicalStep_Lab1_top" for the top level hierarchy
@@ -330,6 +338,7 @@ Warning (275004): Undeclared parameter UP
 Warning (275006): Can't find a definition for parameter LPM_DIRECTION -- assuming UP was intended to be a quoted string
 Warning (275004): Undeclared parameter PORT_UNUSED
 Warning (275006): Can't find a definition for parameter LPM_PORT_UPDOWN -- assuming PORT_UNUSED was intended to be a quoted string
+Info (12128): Elaborating entity "POLARITY_gates" for hierarchy "POLARITY_gates:inst4"
 Info (12128): Elaborating entity "VHDL_gates" for hierarchy "VHDL_gates:inst5"
 Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:inst6"
 Info (12130): Elaborated megafunction instantiation "LPM_COUNTER:inst6"
@@ -344,6 +353,9 @@ Info (12128): Elaborating entity "cntr_luj" for hierarchy "LPM_COUNTER:inst6|cnt
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_6tb.tdf
     Info (12023): Found entity 1: cmpr_6tb File: N:/ECE-124/Lab1/db/cmpr_6tb.tdf Line: 23
 Info (12128): Elaborating entity "cmpr_6tb" for hierarchy "LPM_COUNTER:inst6|cntr_luj:auto_generated|cmpr_6tb:cmpr1" File: N:/ECE-124/Lab1/db/cntr_luj.tdf Line: 177
+Info (12128): Elaborating entity "schem_polar" for hierarchy "schem_polar:inst10"
+Warning (275011): Block or symbol "XOR" of instance "inst" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst2" overlaps another block or symbol
 Info (12128): Elaborating entity "schem_gates" for hierarchy "schem_gates:inst"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg7_char1" is stuck at GND
@@ -351,16 +363,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "sw[1]"
-Info (21057): Implemented 58 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 59 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 43 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 5000 megabytes
-    Info: Processing ended: Tue Jan 14 15:27:57 2020
+    Info (21061): Implemented 44 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4998 megabytes
+    Info: Processing ended: Tue Jan 14 16:13:28 2020
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:23
 
 

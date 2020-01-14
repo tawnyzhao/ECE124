@@ -1,20 +1,36 @@
 |LogicalStep_Lab1_top
 seg7_char1 <= <GND>
 seg7_char2 <= <GND>
-leds[0] <= schem_gates:inst.AND_OUT
-leds[1] <= schem_gates:inst.NAND_OUT
-leds[2] <= schem_gates:inst.OR_OUT
-leds[3] <= schem_gates:inst.XOR_OUT
-leds[4] <= VHDL_gates:inst5.AND_OUT
-leds[5] <= VHDL_gates:inst5.NAND_OUT
-leds[6] <= VHDL_gates:inst5.OR_OUT
-leds[7] <= VHDL_gates:inst5.XOR_OUT
+leds[0] <= schem_polar:inst10.OUT_1
+leds[1] <= schem_polar:inst10.OUT_2
+leds[2] <= schem_polar:inst10.OUT_3
+leds[3] <= schem_polar:inst10.OUT_4
+leds[4] <= POLARITY_gates:inst4.OUT_1
+leds[5] <= POLARITY_gates:inst4.OUT_2
+leds[6] <= POLARITY_gates:inst4.OUT_3
+leds[7] <= POLARITY_gates:inst4.OUT_4
 clkin_50 => inst8.DATAIN
 sw[0] => inst12.IN0
 sw[0] => LPM_COUNTER:inst6.cnt_en
-sw[1] => ~NO_FANOUT~
+sw[1] => POLARITY_gates:inst4.SW
+sw[1] => schem_polar:inst10.POLARITY_CNTRL
 PB[0] => inst1.IN0
 PB[1] => inst2.IN0
+
+
+|LogicalStep_Lab1_top|POLARITY_gates:inst4
+IN_1 => OUT_1.IN0
+IN_2 => OUT_2.IN0
+IN_3 => OUT_3.IN0
+IN_4 => OUT_4.IN0
+SW => OUT_1.IN1
+SW => OUT_2.IN1
+SW => OUT_3.IN1
+SW => OUT_4.IN1
+OUT_1 <= OUT_1.DB_MAX_OUTPUT_PORT_TYPE
+OUT_2 <= OUT_2.DB_MAX_OUTPUT_PORT_TYPE
+OUT_3 <= OUT_3.DB_MAX_OUTPUT_PORT_TYPE
+OUT_4 <= OUT_4.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LogicalStep_Lab1_top|VHDL_gates:inst5
@@ -240,6 +256,21 @@ datab[24] => data_wire[16].IN1
 datab[25] => data_wire[16].IN1
 datab[26] => data_wire[17].IN1
 datab[27] => data_wire[17].IN1
+
+
+|LogicalStep_Lab1_top|schem_polar:inst10
+OUT_1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+POLARITY_CNTRL => inst.IN0
+POLARITY_CNTRL => inst1.IN0
+POLARITY_CNTRL => inst2.IN0
+POLARITY_CNTRL => inst3.IN0
+IN_1 => inst.IN1
+OUT_2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+IN_2 => inst1.IN1
+OUT_3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+IN_3 => inst2.IN1
+OUT_4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+IN_4 => inst3.IN1
 
 
 |LogicalStep_Lab1_top|schem_gates:inst

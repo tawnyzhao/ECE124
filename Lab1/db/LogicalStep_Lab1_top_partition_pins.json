@@ -36,11 +36,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "PB[0]",
+					"name" : "sw[1]",
 					"strict" : false
 				},
 				{
 					"name" : "PB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PB[0]",
 					"strict" : false
 				},
 				{
