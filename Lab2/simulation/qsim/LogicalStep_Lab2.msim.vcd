@@ -1,0 +1,408 @@
+$comment
+	File created using the following command:
+		vcd file LogicalStep_Lab2.msim.vcd -direction
+$end
+$date
+	Tue Jan 28 15:28:14 2020
+$end
+$version
+	ModelSim Version 10.4b
+$end
+$timescale
+	1ps
+$end
+
+$scope module LogicalStep_Lab2_top_vlg_vec_tst $end
+$var reg 1 ! clkin_50 $end
+$var reg 4 " pb [3:0] $end
+$var reg 8 # sw [7:0] $end
+$var wire 1 $ leds [7] $end
+$var wire 1 % leds [6] $end
+$var wire 1 & leds [5] $end
+$var wire 1 ' leds [4] $end
+$var wire 1 ( leds [3] $end
+$var wire 1 ) leds [2] $end
+$var wire 1 * leds [1] $end
+$var wire 1 + leds [0] $end
+$var wire 1 , seg7_char1 $end
+$var wire 1 - seg7_char2 $end
+$var wire 1 . seg7_data [6] $end
+$var wire 1 / seg7_data [5] $end
+$var wire 1 0 seg7_data [4] $end
+$var wire 1 1 seg7_data [3] $end
+$var wire 1 2 seg7_data [2] $end
+$var wire 1 3 seg7_data [1] $end
+$var wire 1 4 seg7_data [0] $end
+
+$scope module i1 $end
+$var wire 1 5 gnd $end
+$var wire 1 6 vcc $end
+$var wire 1 7 unknown $end
+$var tri1 1 8 devclrn $end
+$var tri1 1 9 devpor $end
+$var tri1 1 : devoe $end
+$var wire 1 ; clkin_50~input_o $end
+$var wire 1 < pb[0]~input_o $end
+$var wire 1 = pb[1]~input_o $end
+$var wire 1 > pb[2]~input_o $end
+$var wire 1 ? pb[3]~input_o $end
+$var wire 1 @ sw[4]~input_o $end
+$var wire 1 A sw[5]~input_o $end
+$var wire 1 B sw[6]~input_o $end
+$var wire 1 C sw[7]~input_o $end
+$var wire 1 D leds[0]~output_o $end
+$var wire 1 E leds[1]~output_o $end
+$var wire 1 F leds[2]~output_o $end
+$var wire 1 G leds[3]~output_o $end
+$var wire 1 H leds[4]~output_o $end
+$var wire 1 I leds[5]~output_o $end
+$var wire 1 J leds[6]~output_o $end
+$var wire 1 K leds[7]~output_o $end
+$var wire 1 L seg7_data[0]~output_o $end
+$var wire 1 M seg7_data[1]~output_o $end
+$var wire 1 N seg7_data[2]~output_o $end
+$var wire 1 O seg7_data[3]~output_o $end
+$var wire 1 P seg7_data[4]~output_o $end
+$var wire 1 Q seg7_data[5]~output_o $end
+$var wire 1 R seg7_data[6]~output_o $end
+$var wire 1 S seg7_char1~output_o $end
+$var wire 1 T seg7_char2~output_o $end
+$var wire 1 U sw[0]~input_o $end
+$var wire 1 V sw[1]~input_o $end
+$var wire 1 W sw[2]~input_o $end
+$var wire 1 X sw[3]~input_o $end
+$var wire 1 Y INST1|Mux6~0_combout $end
+$var wire 1 Z INST1|Mux5~0_combout $end
+$var wire 1 [ INST1|Mux4~0_combout $end
+$var wire 1 \ INST1|Mux3~0_combout $end
+$var wire 1 ] INST1|Mux2~0_combout $end
+$var wire 1 ^ INST1|Mux1~0_combout $end
+$var wire 1 _ INST1|Mux0~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x!
+bx "
+bx0000 #
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0,
+0-
+14
+13
+12
+11
+10
+1/
+0.
+05
+16
+x7
+18
+19
+1:
+x;
+x<
+x=
+x>
+x?
+x@
+xA
+xB
+xC
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+1L
+1M
+1N
+1O
+1P
+1Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+$end
+#50000
+bx0001 #
+1U
+1^
+1]
+1\
+1Y
+0L
+0O
+0P
+0Q
+0/
+00
+01
+04
+#100000
+bx0011 #
+bx0010 #
+1V
+0U
+0]
+0\
+1[
+0Y
+1_
+1R
+1L
+0N
+1O
+1P
+10
+11
+02
+14
+1.
+#150000
+bx0011 #
+1U
+1]
+0[
+1N
+0P
+00
+12
+#200000
+bx0111 #
+bx0101 #
+bx0100 #
+1W
+0V
+0U
+0^
+1\
+1Y
+0L
+0O
+1Q
+1/
+01
+04
+#250000
+bx0101 #
+1U
+0\
+1Z
+0Y
+1L
+0M
+1O
+11
+03
+14
+#300000
+bx0111 #
+bx0110 #
+1V
+0U
+0]
+1P
+10
+#350000
+bx0111 #
+1U
+1^
+1]
+1\
+0Z
+0_
+0R
+1M
+0O
+0P
+0Q
+0/
+00
+01
+13
+0.
+#400000
+bx1111 #
+bx1011 #
+bx1001 #
+bx1000 #
+1X
+0W
+0V
+0U
+0^
+0]
+0\
+1_
+1R
+1O
+1P
+1Q
+1/
+10
+11
+1.
+#450000
+bx1001 #
+1U
+1]
+0P
+00
+#500000
+bx1011 #
+bx1010 #
+1V
+0U
+0]
+1\
+0O
+1P
+10
+01
+#550000
+bx1011 #
+1U
+0\
+1Z
+1Y
+0L
+0M
+1O
+11
+03
+04
+#600000
+bx1111 #
+bx1101 #
+bx1100 #
+1W
+0V
+0U
+1^
+1[
+0N
+0Q
+0/
+02
+#650000
+bx1101 #
+1U
+0[
+0Z
+1M
+1N
+12
+13
+#700000
+bx1111 #
+bx1110 #
+1V
+0U
+0^
+1[
+1Z
+0Y
+1L
+0M
+0N
+1Q
+1/
+02
+03
+14
+#750000
+bx1111 #
+1U
+1\
+0O
+01
+#800000
+bx0111 #
+bx0011 #
+bx0001 #
+bx0000 #
+0X
+0W
+0V
+0U
+0\
+0[
+0Z
+0_
+0R
+1M
+1N
+1O
+11
+12
+13
+0.
+#850000
+bx0001 #
+1U
+1^
+1]
+1\
+1Y
+0L
+0O
+0P
+0Q
+0/
+00
+01
+04
+#900000
+bx0011 #
+bx0010 #
+1V
+0U
+0]
+0\
+1[
+0Y
+1_
+1R
+1L
+0N
+1O
+1P
+10
+11
+02
+14
+1.
+#950000
+bx0011 #
+1U
+1]
+0[
+1N
+0P
+00
+12
+#1000000
