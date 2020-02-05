@@ -35,10 +35,10 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 		);
 		end component;
 		
-	component hex_mux port (
+	component add_mux port (
 			mux_select : in std_logic_vector(3 downto 0);
-			hex_num0 : in std_logic_vector(7 downto 0);
-			hex_num1 : in std_logic_vector(7 downto 0);
+			sum : in std_logic_vector(7 downto 0);
+			concat : in std_logic_vector(7 downto 0);
 			hex_out : out std_logic_vector(7 downto 0)
 	);
 	end component;
@@ -51,6 +51,16 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 		leds : out std_logic_vector(7 downto 0)
 	);
 	end component;
+	
+	
+	component adder is 
+		port (
+			hex_num0 : in std_logic_vector(3 downto 0);
+			hex_num1 : in std_logic_vector(3 downto 0);
+			sum : out std_logic_vector(7 downto 0)
+		);
+	end component adder;
+
 -- Create any signals, or temporary variables to be used
 --
 --  std_logic_vector is a signal which can be used for logic operations such as OR, AND, NOT, XOR
@@ -60,9 +70,6 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 	signal hex_A		: std_logic_vector(3 downto 0);
 	signal hex_B		: std_logic_vector(7 downto 4);
 	signal concat     : std_logic_vector(7 downto 0);
-	signal add_inpA : std_logic_vector(7 downto 0);
-	signal add_inpB : std_logic_vector(7 downto 0);
-
 	
 	signal sum      	: std_logic_vector(7 downto 0);	
 	signal seg7_output : std_logic_vector(7 downto 0);
@@ -71,22 +78,24 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 -- Here the circuit begins
 
 begin
-
+-- Read in input from switches 
 hex_A <= sw(3 downto 0);
 hex_B <= sw(7 downto 4);
-add_inpA <= "0000" & hex_A;
-add_inpB <= "0000" & hex_B;
-concat <= hex_B & hex_A;
-sum <= std_logic_vector(unsigned(add_inpA) + unsigned(add_inpB));
 
---seg7_data <= seg7_A;
+-- Find concat to display operands for no command
+concat <= hex_B & hex_A;
 
 --COMPONENT HOOKUP
-	INST1: hex_mux port map(pb, sum, concat, seg7_output);
-	INST2: SevenSegment port map(seg7_output(3 downto 0), seg7_A);
-	INST3: SevenSegment port map(seg7_output(7 downto 4), seg7_B);
-	INST4: segment7_mux port map(clkin_50, seg7_A, seg7_B, seg7_data, seg7_char2, seg7_char1);
-	INST5: led_output port map(pb, hex_A, hex_B, sum, leds);
-	--TODO: ADD hex mux here
+	-- Calculate sum
+	INST1: adder port map(hex_A, hex_B, sum); 
+	-- Select sum or concat
+	INST2: add_mux	port map(pb, sum, concat, seg7_output);
+	-- Convert from hex to seven segment
+	INST3: SevenSegment port map(seg7_output(3 downto 0), seg7_A);
+	INST4: SevenSegment port map(seg7_output(7 downto 4), seg7_B);
+	-- Display seven segment data
+	INST5: segment7_mux port map(clkin_50, seg7_A, seg7_B, seg7_data, seg7_char2, seg7_char1);
+	-- Calculate and display leds
+	INST6: led_output port map(pb, hex_A, hex_B, sum, leds);
 end SimpleCircuit;
 

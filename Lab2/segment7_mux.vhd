@@ -44,7 +44,6 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-
 -- ****************************************************************************
 -- *  Entity                                                                  *
 -- ****************************************************************************
@@ -75,7 +74,6 @@ begin
    -- Register File
    ----------------------------------------------
 
-  
   	clk_proc:process(CLK)
   	variable COUNT			:unsigned(10 downto 0) := "00000000000";
   	begin 
@@ -106,9 +104,5 @@ begin
 	DOUT(5) <= '0' WHEN (DOUT_TEMP(5) = '0')	ELSE 'Z'; --open drain
 	DOUT(6) <= '0' WHEN (DOUT_TEMP(6) = '0')	ELSE 'Z'; --open drain
 --	DOUT(7) <= '0' WHEN (DOUT_TEMP(7) = '0')	ELSE '1'; 
-
-	
-
-	
 
 end architecture syn;

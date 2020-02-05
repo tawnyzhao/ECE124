@@ -1,5 +1,5 @@
 EDA Netlist Writer report for LogicalStep_Lab2_top
-Fri Jan 31 16:40:43 2020
+Wed Feb 05 18:11:57 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Jan 31 16:40:43 2020 ;
+; EDA Netlist Writer Status ; Successful - Wed Feb 05 18:11:57 2020 ;
 ; Revision Name             ; LogicalStep_Lab2_top                  ;
 ; Top-level Entity Name     ; LogicalStep_Lab2_top                  ;
 ; Family                    ; MAX 10                                ;
@@ -66,13 +66,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------+
-; Simulation Generated Files                              ;
-+---------------------------------------------------------+
-; Generated Files                                         ;
-+---------------------------------------------------------+
-; N:/ECE124/Lab2/simulation/qsim//LogicalStep_Lab2_top.vo ;
-+---------------------------------------------------------+
++----------------------------------------------------------+
+; Simulation Generated Files                               ;
++----------------------------------------------------------+
+; Generated Files                                          ;
++----------------------------------------------------------+
+; N:/ECE-124/Lab2/simulation/qsim//LogicalStep_Lab2_top.vo ;
++----------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,13 +95,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Altera and sold by Altera or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Fri Jan 31 16:40:42 2020
-Info: Command: quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=N:/ECE124/Lab2/simulation/qsim/ LogicalStep_Lab2 -c LogicalStep_Lab2_top
-Info (204019): Generated file LogicalStep_Lab2_top.vo in folder "N:/ECE124/Lab2/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Wed Feb 05 18:11:56 2020
+Info: Command: quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=N:/ECE-124/Lab2/simulation/qsim/ LogicalStep_Lab2 -c LogicalStep_Lab2_top
+Info (204019): Generated file LogicalStep_Lab2_top.vo in folder "N:/ECE-124/Lab2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Fri Jan 31 16:40:43 2020
+    Info: Processing ended: Wed Feb 05 18:11:57 2020
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

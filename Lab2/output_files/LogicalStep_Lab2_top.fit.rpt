@@ -1,5 +1,5 @@
 Fitter report for LogicalStep_Lab2_top
-Fri Jan 31 16:00:22 2020
+Wed Feb 05 17:47:31 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jan 31 16:00:22 2020           ;
+; Fitter Status                      ; Successful - Wed Feb 05 17:47:31 2020           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_Lab2_top                            ;
 ; Top-level Entity Name              ; LogicalStep_Lab2_top                            ;
@@ -363,7 +363,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in N:/ECE124/Lab2/output_files/LogicalStep_Lab2_top.pin.
+The pin-out file can be found in N:/ECE-124/Lab2/output_files/LogicalStep_Lab2_top.pin.
 
 
 +--------------------------------------------------------------------+
@@ -730,12 +730,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                      ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------+--------------+
-; |LogicalStep_Lab2_top      ; 71 (6)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 30   ; 0            ; 60 (6)       ; 0 (0)             ; 11 (0)           ; 0          ; |LogicalStep_Lab2_top                    ; work         ;
-;    |SevenSegment:INST2|    ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:INST2 ; work         ;
+; |LogicalStep_Lab2_top      ; 71 (1)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 30   ; 0            ; 60 (1)       ; 0 (0)             ; 11 (0)           ; 0          ; |LogicalStep_Lab2_top                    ; work         ;
 ;    |SevenSegment:INST3|    ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:INST3 ; work         ;
-;    |hex_mux:INST1|         ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|hex_mux:INST1      ; work         ;
-;    |led_output:INST5|      ; 22 (22)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|led_output:INST5   ; work         ;
-;    |segment7_mux:INST4|    ; 18 (18)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 11 (11)          ; 0          ; |LogicalStep_Lab2_top|segment7_mux:INST4 ; work         ;
+;    |SevenSegment:INST4|    ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|SevenSegment:INST4 ; work         ;
+;    |add_mux:INST2|         ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|add_mux:INST2      ; work         ;
+;    |adder:INST1|           ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|adder:INST1        ; work         ;
+;    |led_output:INST6|      ; 22 (22)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab2_top|led_output:INST6   ; work         ;
+;    |segment7_mux:INST5|    ; 18 (18)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 11 (11)          ; 0          ; |LogicalStep_Lab2_top|segment7_mux:INST5 ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -784,101 +785,101 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout             ; Pad To Core Index ; Setting ;
 +---------------------------------+-------------------+---------+
 ; sw[4]                           ;                   ;         ;
-;      - Add0~0                   ; 0                 ; 6       ;
-;      - led_output:INST5|Mux7~0  ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux3~0     ; 0                 ; 6       ;
+;      - adder:INST1|sum[0]~0     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux7~0  ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux3~0     ; 0                 ; 6       ;
 ; sw[0]                           ;                   ;         ;
-;      - Add0~0                   ; 0                 ; 6       ;
-;      - led_output:INST5|Mux7~0  ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux7~1     ; 0                 ; 6       ;
+;      - adder:INST1|sum[0]~0     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux7~0  ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux7~1     ; 0                 ; 6       ;
 ; pb[0]                           ;                   ;         ;
-;      - led_output:INST5|Mux7~0  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux7~1  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~5  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~6  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux4~0  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux3~0  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux3~1  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux2~0  ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux7~0     ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux0~0     ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux0~1     ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~10 ; 1                 ; 6       ;
-;      - led_output:INST5|Mux4~2  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux4~3  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux7~0  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux7~1  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~5  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~6  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux4~0  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux3~0  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux3~1  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux2~0  ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux7~0     ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux0~0     ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux0~1     ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~10 ; 1                 ; 6       ;
+;      - led_output:INST6|Mux4~2  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux4~3  ; 1                 ; 6       ;
 ; pb[1]                           ;                   ;         ;
-;      - led_output:INST5|Mux7~0  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux7~1  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~4  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~5  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~6  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux3~0  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux2~0  ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux7~0     ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux0~0     ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux0~1     ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~10 ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~11 ; 1                 ; 6       ;
-;      - led_output:INST5|Mux5~7  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux4~2  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux4~3  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux7~0  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux7~1  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~4  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~5  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~6  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux3~0  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux2~0  ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux7~0     ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux0~0     ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux0~1     ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~10 ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~11 ; 1                 ; 6       ;
+;      - led_output:INST6|Mux5~7  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux4~2  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux4~3  ; 1                 ; 6       ;
 ; pb[2]                           ;                   ;         ;
-;      - led_output:INST5|Mux7~2  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~4  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~5  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~6  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux3~0  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux2~0  ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux7~0     ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux0~0     ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux0~1     ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~10 ; 1                 ; 6       ;
-;      - led_output:INST5|Mux6~11 ; 1                 ; 6       ;
-;      - led_output:INST5|Mux5~7  ; 1                 ; 6       ;
-;      - led_output:INST5|Mux4~3  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux7~2  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~4  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~5  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~6  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux3~0  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux2~0  ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux7~0     ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux0~0     ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux0~1     ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~10 ; 1                 ; 6       ;
+;      - led_output:INST6|Mux6~11 ; 1                 ; 6       ;
+;      - led_output:INST6|Mux5~7  ; 1                 ; 6       ;
+;      - led_output:INST6|Mux4~3  ; 1                 ; 6       ;
 ; pb[3]                           ;                   ;         ;
-;      - led_output:INST5|Mux7~2  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux6~5  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux4~0  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux4~1  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux3~0  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux3~1  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux2~0  ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux7~0     ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux0~0     ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux4~0     ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux2~0     ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux1~0     ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux0~2     ; 0                 ; 6       ;
-;      - led_output:INST5|Mux6~10 ; 0                 ; 6       ;
+;      - led_output:INST6|Mux7~2  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux6~5  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux4~0  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux4~1  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux3~0  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux3~1  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux2~0  ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux7~0     ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux0~0     ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux4~0     ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux2~0     ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux1~0     ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux0~2     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux6~10 ; 0                 ; 6       ;
 ; sw[5]                           ;                   ;         ;
-;      - Add0~2                   ; 0                 ; 6       ;
-;      - led_output:INST5|Mux6~7  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux6~8  ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux2~0     ; 0                 ; 6       ;
+;      - adder:INST1|sum[1]~2     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux6~7  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux6~8  ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux2~0     ; 0                 ; 6       ;
 ; sw[1]                           ;                   ;         ;
-;      - Add0~2                   ; 0                 ; 6       ;
-;      - led_output:INST5|Mux6~7  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux6~8  ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux6~0     ; 0                 ; 6       ;
+;      - adder:INST1|sum[1]~2     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux6~7  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux6~8  ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux6~0     ; 0                 ; 6       ;
 ; sw[6]                           ;                   ;         ;
-;      - Add0~4                   ; 0                 ; 6       ;
-;      - led_output:INST5|Mux5~4  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux5~5  ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux1~0     ; 0                 ; 6       ;
+;      - adder:INST1|sum[2]~4     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux5~4  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux5~5  ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux1~0     ; 0                 ; 6       ;
 ; sw[2]                           ;                   ;         ;
-;      - Add0~4                   ; 0                 ; 6       ;
-;      - led_output:INST5|Mux5~4  ; 0                 ; 6       ;
-;      - led_output:INST5|Mux5~5  ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux5~0     ; 0                 ; 6       ;
+;      - adder:INST1|sum[2]~4     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux5~4  ; 0                 ; 6       ;
+;      - led_output:INST6|Mux5~5  ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux5~0     ; 0                 ; 6       ;
 ; sw[7]                           ;                   ;         ;
-;      - Add0~6                   ; 1                 ; 6       ;
-;      - hex_mux:INST1|Mux0~2     ; 1                 ; 6       ;
-;      - led_output:INST5|Mux4~2  ; 1                 ; 6       ;
+;      - adder:INST1|sum[3]~6     ; 1                 ; 6       ;
+;      - add_mux:INST2|Mux0~2     ; 1                 ; 6       ;
+;      - led_output:INST6|Mux4~2  ; 1                 ; 6       ;
 ; sw[3]                           ;                   ;         ;
-;      - Add0~6                   ; 0                 ; 6       ;
-;      - hex_mux:INST1|Mux4~0     ; 0                 ; 6       ;
-;      - led_output:INST5|Mux4~2  ; 0                 ; 6       ;
+;      - adder:INST1|sum[3]~6     ; 0                 ; 6       ;
+;      - add_mux:INST2|Mux4~0     ; 0                 ; 6       ;
+;      - led_output:INST6|Mux4~2  ; 0                 ; 6       ;
 ; clkin_50                        ;                   ;         ;
 +---------------------------------+-------------------+---------+
 
@@ -1187,7 +1188,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clkin_50~input (placed in PIN 29 (CLK1p, DIFFIO_RX_L20p, DIFFOUT_L20p, High_Speed)) File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 7
+Info (176353): Automatically promoted node clkin_50~input (placed in PIN 29 (CLK1p, DIFFIO_RX_L20p, DIFFOUT_L20p, High_Speed)) File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1280,19 +1281,19 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 13 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin sw[4] uses I/O standard 3.3-V LVCMOS at 8 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[0] uses I/O standard 3.3-V LVCMOS at 30 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin pb[0] uses I/O standard 3.3-V LVCMOS at 46 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin pb[1] uses I/O standard 3.3-V LVCMOS at 45 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin pb[2] uses I/O standard 3.3-V LVCMOS at 44 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin pb[3] uses I/O standard 3.3-V LVCMOS at 43 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
-    Info (169178): Pin sw[5] uses I/O standard 3.3-V LVCMOS at 6 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[1] uses I/O standard 3.3-V LVCMOS at 13 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[6] uses I/O standard 3.3-V LVCMOS at 39 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[2] uses I/O standard 3.3-V LVCMOS at 14 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[7] uses I/O standard 3.3-V LVCMOS at 141 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin sw[3] uses I/O standard 3.3-V LVCMOS at 11 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
-    Info (169178): Pin clkin_50 uses I/O standard 3.3-V LVCMOS at 29 File: N:/ECE124/Lab2/LogicalStep_Lab2_top.vhd Line: 7
+    Info (169178): Pin sw[4] uses I/O standard 3.3-V LVCMOS at 8 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[0] uses I/O standard 3.3-V LVCMOS at 30 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin pb[0] uses I/O standard 3.3-V LVCMOS at 46 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin pb[1] uses I/O standard 3.3-V LVCMOS at 45 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin pb[2] uses I/O standard 3.3-V LVCMOS at 44 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin pb[3] uses I/O standard 3.3-V LVCMOS at 43 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 8
+    Info (169178): Pin sw[5] uses I/O standard 3.3-V LVCMOS at 6 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[1] uses I/O standard 3.3-V LVCMOS at 13 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[6] uses I/O standard 3.3-V LVCMOS at 39 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[2] uses I/O standard 3.3-V LVCMOS at 14 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[7] uses I/O standard 3.3-V LVCMOS at 141 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin sw[3] uses I/O standard 3.3-V LVCMOS at 11 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 9
+    Info (169178): Pin clkin_50 uses I/O standard 3.3-V LVCMOS at 29 File: N:/ECE-124/Lab2/LogicalStep_Lab2_top.vhd Line: 7
 Warning (14579): Pin leds[2] uses I/O standard 3.3-V LVCMOS located at 17 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin leds[3] uses I/O standard 3.3-V LVCMOS located at 12 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin leds[4] uses I/O standard 3.3-V LVCMOS located at 10 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
@@ -1311,17 +1312,17 @@ Warning (14579): Pin sw[1] uses I/O standard 3.3-V LVCMOS located at 13 will hav
 Warning (14579): Pin sw[2] uses I/O standard 3.3-V LVCMOS located at 14 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin sw[7] uses I/O standard 3.3-V LVCMOS located at 141 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin sw[3] uses I/O standard 3.3-V LVCMOS located at 11 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
-Info (144001): Generated suppressed messages file N:/ECE124/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg
+Info (144001): Generated suppressed messages file N:/ECE-124/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 90 warnings
     Info: Peak virtual memory: 5578 megabytes
-    Info: Processing ended: Fri Jan 31 16:00:22 2020
+    Info: Processing ended: Wed Feb 05 17:47:31 2020
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in N:/ECE124/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg.
+The suppressed messages can be found in N:/ECE-124/Lab2/output_files/LogicalStep_Lab2_top.fit.smsg.
 
 
