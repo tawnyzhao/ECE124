@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity compx1 is 
+	port (
+		bit_A : in std_logic;
+		bit_B : in std_logic;
+		GT : out std_logic;
+		EQ : out std_logic;
+		LT: out std_logic;
+	);
+end entity compx1;
+
+architecture compx1_logic of compx1 is 
+
+begin
+	---------------------------
+	-- A - B -- GT - EQ - LT --
+	-- 0   0     0    1    0
+   -- 0   1     0    0    1
+	-- 1   0     1    0    0
+	-- 1   1     0    1    0
+	---------------------------
+	
+	GT <= bit_A AND NOT bit_B;
+	EQ <= NOT (bit_A XOR bit_B);
+	LT <= NOT bit_A AND bit_B;
+	
+
+end architecture compx1_logic;

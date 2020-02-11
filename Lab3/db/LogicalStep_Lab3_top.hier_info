@@ -1,0 +1,95 @@
+|LogicalStep_Lab3_top
+clkin_50 => ~NO_FANOUT~
+pb[0] => ~NO_FANOUT~
+pb[1] => ~NO_FANOUT~
+pb[2] => ~NO_FANOUT~
+pb[3] => ~NO_FANOUT~
+sw[0] => compx4:INST1.A[0]
+sw[1] => compx4:INST1.A[1]
+sw[2] => compx4:INST1.A[2]
+sw[3] => compx4:INST1.A[3]
+sw[4] => compx4:INST1.B[0]
+sw[5] => compx4:INST1.B[1]
+sw[6] => compx4:INST1.B[2]
+sw[7] => compx4:INST1.B[3]
+leds[0] << compx4:INST1.comparisons[0]
+leds[1] << compx4:INST1.comparisons[1]
+leds[2] << compx4:INST1.comparisons[2]
+leds[3] << <GND>
+leds[4] << <GND>
+leds[5] << <GND>
+leds[6] << <GND>
+leds[7] << <GND>
+seg7_data[0] << seg7_data[0].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[1] << seg7_data[1].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[2] << seg7_data[2].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[3] << seg7_data[3].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[4] << seg7_data[4].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[5] << seg7_data[5].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[6] << seg7_data[6].DB_MAX_OUTPUT_PORT_TYPE
+seg7_char1 << seg7_char1.DB_MAX_OUTPUT_PORT_TYPE
+seg7_char2 << comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|compx4:INST1
+A[0] => compx1:INST1.bit_A
+A[1] => compx1:INST2.bit_A
+A[2] => compx1:INST3.bit_A
+A[3] => compx1:INST4.bit_A
+B[0] => compx1:INST1.bit_B
+B[1] => compx1:INST2.bit_B
+B[2] => compx1:INST3.bit_B
+B[3] => compx1:INST4.bit_B
+comparisons[0] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[1] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[2] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|compx4:INST1|compx1:INST1
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+comparisons[2] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[1] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[0] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|compx4:INST1|compx1:INST2
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+comparisons[2] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[1] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[0] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|compx4:INST1|compx1:INST3
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+comparisons[2] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[1] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[0] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|compx4:INST1|compx1:INST4
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_A => comparisons.IN0
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+bit_B => comparisons.IN1
+comparisons[2] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[1] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+comparisons[0] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+
+

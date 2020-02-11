@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity compx4 is 
+	port (
+		A0 : in std_logic;
+		B0 : in std_logic;
+		A1 : in std_logic;
+		B1 : in std_logic;
+		A0 : in std_logic;
+		B0 : in std_logic;
+		A0 : in std_logic;
+		B0 : in std_logic;
+		
+	);
+end entity compx4;
+
+architecture compx4_logic of compx4 is 
+
+	component compx1 port (
+		bit_A : in std_logic;
+		bit_B : in std_logic;
+		GT : out std_logic;
+		EQ : out std_logic;
+		LT: out std_logic;
+	);
+   end component;
+	
+begin
+	
+	
+
+end architecture compx4_logic;
