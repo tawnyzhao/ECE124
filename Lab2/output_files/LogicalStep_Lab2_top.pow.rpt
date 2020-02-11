@@ -1,5 +1,5 @@
 PowerPlay Power Analyzer report for LogicalStep_Lab2_top
-Wed Feb 05 17:47:43 2020
+Tue Feb 11 13:57:14 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -53,18 +53,19 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 2.00        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
-;     Processors 1-2         ; 100.0%      ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; PowerPlay Power Analyzer Summary                                                          ;
 +----------------------------------------+--------------------------------------------------+
-; PowerPlay Power Analyzer Status        ; Successful - Wed Feb 05 17:47:43 2020            ;
+; PowerPlay Power Analyzer Status        ; Successful - Tue Feb 11 13:57:14 2020            ;
 ; Quartus Prime Version                  ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition  ;
 ; Revision Name                          ; LogicalStep_Lab2_top                             ;
 ; Top-level Entity Name                  ; LogicalStep_Lab2_top                             ;
@@ -179,12 +180,12 @@ agreement for further details.
 +-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+------------------------------------------------------+
 ; |LogicalStep_Lab2_top               ; 1.53 mW (1.53 mW)                    ; 0.00 mW (0.00 mW)               ; 1.53 mW (1.53 mW)                 ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top                                ;
 ;     |hard_block:auto_generated_inst ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|hard_block:auto_generated_inst ;
-;     |adder:INST1                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|adder:INST1                    ;
-;     |add_mux:INST2                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|add_mux:INST2                  ;
-;     |SevenSegment:INST3             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|SevenSegment:INST3             ;
-;     |SevenSegment:INST4             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|SevenSegment:INST4             ;
-;     |segment7_mux:INST5             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|segment7_mux:INST5             ;
-;     |led_output:INST6               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|led_output:INST6               ;
+;     |adder:INST3                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|adder:INST3                    ;
+;     |add_mux:INST4                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|add_mux:INST4                  ;
+;     |SevenSegment:INST5             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|SevenSegment:INST5             ;
+;     |SevenSegment:INST6             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|SevenSegment:INST6             ;
+;     |segment7_mux:INST7             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|segment7_mux:INST7             ;
+;     |led_output:INST8               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |LogicalStep_Lab2_top|led_output:INST8               ;
 +-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
@@ -282,13 +283,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime PowerPlay Power Analyzer
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Wed Feb 05 17:47:41 2020
+    Info: Processing started: Tue Feb 11 13:57:11 2020
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off LogicalStep_Lab2 -c LogicalStep_Lab2_top
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'LogicalStep_Lab2_top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: clkin_50 was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register segment7_mux:INST5|\clk_proc:COUNT[10] is being clocked by clkin_50
+    Info (13166): Register segment7_mux:INST7|\clk_proc:COUNT[10] is being clocked by clkin_50
 Warning (332068): No clocks defined in design.
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
@@ -299,9 +300,9 @@ Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
 Info (215031): Total thermal power estimate for the design is 159.78 mW
 Info: Quartus Prime PowerPlay Power Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4985 megabytes
-    Info: Processing ended: Wed Feb 05 17:47:43 2020
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4984 megabytes
+    Info: Processing ended: Tue Feb 11 13:57:15 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 

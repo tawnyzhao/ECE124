@@ -1,57 +1,79 @@
 |LogicalStep_Lab2_top
-clkin_50 => segment7_mux:INST5.clk
-pb[0] => add_mux:INST2.mux_select[0]
-pb[0] => led_output:INST6.mux_select[0]
-pb[1] => add_mux:INST2.mux_select[1]
-pb[1] => led_output:INST6.mux_select[1]
-pb[2] => add_mux:INST2.mux_select[2]
-pb[2] => led_output:INST6.mux_select[2]
-pb[3] => add_mux:INST2.mux_select[3]
-pb[3] => led_output:INST6.mux_select[3]
-sw[0] => adder:INST1.hex_num0[0]
-sw[0] => add_mux:INST2.concat[0]
-sw[0] => led_output:INST6.hex_num0[0]
-sw[1] => adder:INST1.hex_num0[1]
-sw[1] => add_mux:INST2.concat[1]
-sw[1] => led_output:INST6.hex_num0[1]
-sw[2] => adder:INST1.hex_num0[2]
-sw[2] => add_mux:INST2.concat[2]
-sw[2] => led_output:INST6.hex_num0[2]
-sw[3] => adder:INST1.hex_num0[3]
-sw[3] => add_mux:INST2.concat[3]
-sw[3] => led_output:INST6.hex_num0[3]
-sw[4] => adder:INST1.hex_num1[0]
-sw[4] => add_mux:INST2.concat[4]
-sw[4] => led_output:INST6.hex_num1[0]
-sw[5] => adder:INST1.hex_num1[1]
-sw[5] => add_mux:INST2.concat[5]
-sw[5] => led_output:INST6.hex_num1[1]
-sw[6] => adder:INST1.hex_num1[2]
-sw[6] => add_mux:INST2.concat[6]
-sw[6] => led_output:INST6.hex_num1[2]
-sw[7] => adder:INST1.hex_num1[3]
-sw[7] => add_mux:INST2.concat[7]
-sw[7] => led_output:INST6.hex_num1[3]
-leds[0] << led_output:INST6.leds[0]
-leds[1] << led_output:INST6.leds[1]
-leds[2] << led_output:INST6.leds[2]
-leds[3] << led_output:INST6.leds[3]
-leds[4] << led_output:INST6.leds[4]
-leds[5] << led_output:INST6.leds[5]
-leds[6] << led_output:INST6.leds[6]
-leds[7] << led_output:INST6.leds[7]
-seg7_data[0] << segment7_mux:INST5.DOUT[0]
-seg7_data[1] << segment7_mux:INST5.DOUT[1]
-seg7_data[2] << segment7_mux:INST5.DOUT[2]
-seg7_data[3] << segment7_mux:INST5.DOUT[3]
-seg7_data[4] << segment7_mux:INST5.DOUT[4]
-seg7_data[5] << segment7_mux:INST5.DOUT[5]
-seg7_data[6] << segment7_mux:INST5.DOUT[6]
-seg7_char1 << segment7_mux:INST5.DIG1
-seg7_char2 << segment7_mux:INST5.DIG2
+clkin_50 => segment7_mux:INST7.clk
+pb[0] => add_mux:INST4.mux_select[0]
+pb[0] => led_output:INST8.mux_select[0]
+pb[1] => add_mux:INST4.mux_select[1]
+pb[1] => led_output:INST8.mux_select[1]
+pb[2] => add_mux:INST4.mux_select[2]
+pb[2] => led_output:INST8.mux_select[2]
+pb[3] => add_mux:INST4.mux_select[3]
+pb[3] => led_output:INST8.mux_select[3]
+sw[0] => switch_input:INST1.sw[0]
+sw[1] => switch_input:INST1.sw[1]
+sw[2] => switch_input:INST1.sw[2]
+sw[3] => switch_input:INST1.sw[3]
+sw[4] => switch_input:INST1.sw[4]
+sw[5] => switch_input:INST1.sw[5]
+sw[6] => switch_input:INST1.sw[6]
+sw[7] => switch_input:INST1.sw[7]
+leds[0] << led_output:INST8.leds[0]
+leds[1] << led_output:INST8.leds[1]
+leds[2] << led_output:INST8.leds[2]
+leds[3] << led_output:INST8.leds[3]
+leds[4] << led_output:INST8.leds[4]
+leds[5] << led_output:INST8.leds[5]
+leds[6] << led_output:INST8.leds[6]
+leds[7] << led_output:INST8.leds[7]
+seg7_data[0] << segment7_mux:INST7.DOUT[0]
+seg7_data[1] << segment7_mux:INST7.DOUT[1]
+seg7_data[2] << segment7_mux:INST7.DOUT[2]
+seg7_data[3] << segment7_mux:INST7.DOUT[3]
+seg7_data[4] << segment7_mux:INST7.DOUT[4]
+seg7_data[5] << segment7_mux:INST7.DOUT[5]
+seg7_data[6] << segment7_mux:INST7.DOUT[6]
+seg7_char1 << segment7_mux:INST7.DIG1
+seg7_char2 << segment7_mux:INST7.DIG2
 
 
-|LogicalStep_Lab2_top|adder:INST1
+|LogicalStep_Lab2_top|switch_input:INST1
+sw[0] => hex_A[0].DATAIN
+sw[1] => hex_A[1].DATAIN
+sw[2] => hex_A[2].DATAIN
+sw[3] => hex_A[3].DATAIN
+sw[4] => hex_B[0].DATAIN
+sw[5] => hex_B[1].DATAIN
+sw[6] => hex_B[2].DATAIN
+sw[7] => hex_B[3].DATAIN
+hex_A[0] <= sw[0].DB_MAX_OUTPUT_PORT_TYPE
+hex_A[1] <= sw[1].DB_MAX_OUTPUT_PORT_TYPE
+hex_A[2] <= sw[2].DB_MAX_OUTPUT_PORT_TYPE
+hex_A[3] <= sw[3].DB_MAX_OUTPUT_PORT_TYPE
+hex_B[0] <= sw[4].DB_MAX_OUTPUT_PORT_TYPE
+hex_B[1] <= sw[5].DB_MAX_OUTPUT_PORT_TYPE
+hex_B[2] <= sw[6].DB_MAX_OUTPUT_PORT_TYPE
+hex_B[3] <= sw[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|concatenator:INST2
+hex_num0[0] => concat[0].DATAIN
+hex_num0[1] => concat[1].DATAIN
+hex_num0[2] => concat[2].DATAIN
+hex_num0[3] => concat[3].DATAIN
+hex_num1[0] => concat[4].DATAIN
+hex_num1[1] => concat[5].DATAIN
+hex_num1[2] => concat[6].DATAIN
+hex_num1[3] => concat[7].DATAIN
+concat[0] <= hex_num0[0].DB_MAX_OUTPUT_PORT_TYPE
+concat[1] <= hex_num0[1].DB_MAX_OUTPUT_PORT_TYPE
+concat[2] <= hex_num0[2].DB_MAX_OUTPUT_PORT_TYPE
+concat[3] <= hex_num0[3].DB_MAX_OUTPUT_PORT_TYPE
+concat[4] <= hex_num1[0].DB_MAX_OUTPUT_PORT_TYPE
+concat[5] <= hex_num1[1].DB_MAX_OUTPUT_PORT_TYPE
+concat[6] <= hex_num1[2].DB_MAX_OUTPUT_PORT_TYPE
+concat[7] <= hex_num1[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|adder:INST3
 hex_num0[0] => Add0.IN4
 hex_num0[1] => Add0.IN3
 hex_num0[2] => Add0.IN2
@@ -70,7 +92,7 @@ sum[6] <= <GND>
 sum[7] <= <GND>
 
 
-|LogicalStep_Lab2_top|add_mux:INST2
+|LogicalStep_Lab2_top|add_mux:INST4
 mux_select[0] => Mux0.IN14
 mux_select[0] => Mux1.IN14
 mux_select[0] => Mux2.IN14
@@ -153,7 +175,7 @@ hex_out[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 hex_out[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab2_top|SevenSegment:INST3
+|LogicalStep_Lab2_top|SevenSegment:INST5
 hex[0] => Mux0.IN19
 hex[0] => Mux1.IN19
 hex[0] => Mux2.IN19
@@ -191,7 +213,7 @@ sevenseg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 sevenseg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab2_top|SevenSegment:INST4
+|LogicalStep_Lab2_top|SevenSegment:INST6
 hex[0] => Mux0.IN19
 hex[0] => Mux1.IN19
 hex[0] => Mux2.IN19
@@ -229,7 +251,7 @@ sevenseg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 sevenseg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab2_top|segment7_mux:INST5
+|LogicalStep_Lab2_top|segment7_mux:INST7
 clk => \clk_proc:COUNT[0].CLK
 clk => \clk_proc:COUNT[1].CLK
 clk => \clk_proc:COUNT[2].CLK
@@ -266,7 +288,7 @@ DIG2 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
 DIG1 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab2_top|led_output:INST6
+|LogicalStep_Lab2_top|led_output:INST8
 mux_select[0] => Mux0.IN18
 mux_select[0] => Mux1.IN18
 mux_select[0] => Mux2.IN18
