@@ -1,6 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+-- LAB 2
+-- Written by Jonathan Cui 20831049 and Tony Zhao 20839593, TEAM 17
 
 entity adder is 
 	port (

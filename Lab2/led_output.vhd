@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
+-- LAB 2
+-- Written by Jonathan Cui 20831049 and Tony Zhao 20839593, TEAM 17
 entity led_output is 
 	port (
 		mux_select : in std_logic_vector(3 downto 0);

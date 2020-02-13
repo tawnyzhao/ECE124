@@ -1,26 +1,20 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+-- LAB 2
+-- Written by Jonathan Cui 20831049 and Tony Zhao 20839593, TEAM 17
 -------------------------------------------------------------------------
 -- 7-segment display driver. It displays a 4-bit number on a 7-segment
 -- This is created as an entity so that it can be reused many times easily
---
-
 entity SevenSegment is port (
-   
    hex	   :  in  std_logic_vector(3 downto 0);   -- The 4 bit data to be displayed
-   
    sevenseg :  out std_logic_vector(6 downto 0)    -- 7-bit outputs to a 7-segment
 ); 
 end SevenSegment;
 
 architecture Behavioral of SevenSegment is
-
--- 
 -- The following statements convert a 4-bit input, called dataIn to a pattern of 7 bits
 -- The segment turns on when it is '1' otherwise '0'
---
 begin
    with hex select						     --GFEDCBA        3210      -- data in   
 	sevenseg 				    			   <= "0111111" when "0000",    -- [0]

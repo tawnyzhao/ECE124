@@ -1,17 +1,17 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+-- LAB 2
+-- Written by Jonathan Cui 20831049 and Tony Zhao 20839593, TEAM 17
 
 entity LogicalStep_Lab2_top is port (
    clkin_50			: in	std_logic;
 	pb					: in	std_logic_vector(3 downto 0); -- Buttons
  	sw   				: in  std_logic_vector(7 downto 0); -- The switch inputs
-   leds				: out std_logic_vector(7 downto 0); -- for displaying the switch content
-   seg7_data 		: out std_logic_vector(6 downto 0); -- 7-bit outputs to a 7-segment
+  	leds				: out std_logic_vector(7 downto 0); -- for displaying the switch content
+   	seg7_data 		: out std_logic_vector(6 downto 0); -- 7-bit outputs to a 7-segment
 	seg7_char1  	: out	std_logic;				    		-- seg7 digit1 selector
 	seg7_char2  	: out	std_logic				    		-- seg7 digit2 selector
-	
 ); 
 end LogicalStep_Lab2_top;
 
@@ -87,7 +87,6 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 	signal hex_A		: std_logic_vector(3 downto 0);
 	signal hex_B		: std_logic_vector(7 downto 4);
 	signal concat     : std_logic_vector(7 downto 0);
-	
 	signal sum      	: std_logic_vector(7 downto 0);	
 	signal seg7_output : std_logic_vector(7 downto 0);
 	
@@ -95,12 +94,7 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 -- Here the circuit begins
 
 begin
--- Read in input from switches 
-
--- Find concat to display operands for no command
-
-
---COMPONENT HOOKUP
+	--COMPONENT HOOKUP
 	-- Calculate sum
 	INST1: switch_input port map(sw ,hex_A, hex_B);
 	INST2: concatenator port map(hex_A, hex_B, concat);
