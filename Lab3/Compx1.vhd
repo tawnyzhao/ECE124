@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+-- One bit comparator for use in making a four bit comparator
 entity compx1 is 
 	port (
 		bit_A : in std_logic;
@@ -13,7 +13,7 @@ end entity compx1;
 architecture compx1_logic of compx1 is 
 
 begin
-	---------------------------
+	--------------------------- Truth table
 	-- A - B -- GT - EQ - LT --
 	-- 0   0     0    1    0
    -- 0   1     0    0    1

@@ -1,43 +1,49 @@
 |LogicalStep_Lab3_top
 clkin_50 => segment7_mux:INST7.clk
-pb[0] => FURNACE_ON.IN1
-pb[0] => AC_ON.IN1
+pb[0] => energy_monitor:INST3.door_open
 pb[0] => leds[4].DATAIN
-pb[1] => FURNACE_ON.IN1
-pb[1] => AC_ON.IN1
+pb[1] => energy_monitor:INST3.window_open
 pb[1] => leds[5].DATAIN
-pb[2] => ~NO_FANOUT~
+pb[2] => test_bench:INST2.MC_TESTMODE
 pb[3] => Vacation_mode_mux:INST8.vacation_mode
 pb[3] => leds[7].DATAIN
+sw[0] => test_bench:INST2.sw[0]
 sw[0] => compx4:INST1.A[0]
 sw[0] => SevenSegment:INST5.hex[0]
+sw[1] => test_bench:INST2.sw[1]
 sw[1] => compx4:INST1.A[1]
 sw[1] => SevenSegment:INST5.hex[1]
+sw[2] => test_bench:INST2.sw[2]
 sw[2] => compx4:INST1.A[2]
 sw[2] => SevenSegment:INST5.hex[2]
+sw[3] => test_bench:INST2.sw[3]
 sw[3] => compx4:INST1.A[3]
 sw[3] => SevenSegment:INST5.hex[3]
+sw[4] => test_bench:INST2.sw[4]
 sw[4] => Vacation_mode_mux:INST8.Desired_Temp[0]
+sw[5] => test_bench:INST2.sw[5]
 sw[5] => Vacation_mode_mux:INST8.Desired_Temp[1]
+sw[6] => test_bench:INST2.sw[6]
 sw[6] => Vacation_mode_mux:INST8.Desired_Temp[2]
+sw[7] => test_bench:INST2.sw[7]
 sw[7] => Vacation_mode_mux:INST8.Desired_Temp[3]
-leds[0] << FURNACE_ON.DB_MAX_OUTPUT_PORT_TYPE
-leds[1] << compx4:INST1.comparisons[1]
-leds[2] << AC_ON.DB_MAX_OUTPUT_PORT_TYPE
-leds[3] << BLOWER_ON.DB_MAX_OUTPUT_PORT_TYPE
-leds[4] << pb[0].DB_MAX_OUTPUT_PORT_TYPE
-leds[5] << pb[1].DB_MAX_OUTPUT_PORT_TYPE
-leds[6] << <GND>
-leds[7] << pb[3].DB_MAX_OUTPUT_PORT_TYPE
-seg7_data[0] << segment7_mux:INST7.DOUT[0]
-seg7_data[1] << segment7_mux:INST7.DOUT[1]
-seg7_data[2] << segment7_mux:INST7.DOUT[2]
-seg7_data[3] << segment7_mux:INST7.DOUT[3]
-seg7_data[4] << segment7_mux:INST7.DOUT[4]
-seg7_data[5] << segment7_mux:INST7.DOUT[5]
-seg7_data[6] << segment7_mux:INST7.DOUT[6]
-seg7_char1 << segment7_mux:INST7.DIG1
-seg7_char2 << segment7_mux:INST7.DIG2
+leds[0] <= energy_monitor:INST3.FURNACE_ON
+leds[1] <= energy_monitor:INST3.SYSTEM_AT_TEMP
+leds[2] <= energy_monitor:INST3.AC_ON
+leds[3] <= energy_monitor:INST3.BLOWER_ON
+leds[4] <= pb[0].DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= pb[1].DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= test_bench:INST2.TEST_PASS
+leds[7] <= pb[3].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[0] <= segment7_mux:INST7.DOUT[0]
+seg7_data[1] <= segment7_mux:INST7.DOUT[1]
+seg7_data[2] <= segment7_mux:INST7.DOUT[2]
+seg7_data[3] <= segment7_mux:INST7.DOUT[3]
+seg7_data[4] <= segment7_mux:INST7.DOUT[4]
+seg7_data[5] <= segment7_mux:INST7.DOUT[5]
+seg7_data[6] <= segment7_mux:INST7.DOUT[6]
+seg7_char1 <= segment7_mux:INST7.DIG1
+seg7_char2 <= segment7_mux:INST7.DIG2
 
 
 |LogicalStep_Lab3_top|compx4:INST1
@@ -100,6 +106,52 @@ bit_B => comparisons.IN1
 comparisons[2] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
 comparisons[1] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
 comparisons[0] <= comparisons.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|test_bench:INST2
+sw[0] => Equal0.IN7
+sw[0] => LessThan0.IN8
+sw[0] => LessThan1.IN8
+sw[1] => Equal0.IN6
+sw[1] => LessThan0.IN7
+sw[1] => LessThan1.IN7
+sw[2] => Equal0.IN5
+sw[2] => LessThan0.IN6
+sw[2] => LessThan1.IN6
+sw[3] => Equal0.IN4
+sw[3] => LessThan0.IN5
+sw[3] => LessThan1.IN5
+sw[4] => Equal0.IN3
+sw[4] => LessThan0.IN4
+sw[4] => LessThan1.IN4
+sw[5] => Equal0.IN2
+sw[5] => LessThan0.IN3
+sw[5] => LessThan1.IN3
+sw[6] => Equal0.IN1
+sw[6] => LessThan0.IN2
+sw[6] => LessThan1.IN2
+sw[7] => Equal0.IN0
+sw[7] => LessThan0.IN1
+sw[7] => LessThan1.IN1
+CMP[0] => Testbench1.IN1
+CMP[1] => \Testbench1:EQ_PASS.IN1
+CMP[2] => Testbench1.IN1
+MC_TESTMODE => TEST_PASS.IN1
+TEST_PASS <= TEST_PASS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|energy_monitor:INST3
+CMP[0] => FURNACE_ON.IN0
+CMP[1] => SYSTEM_AT_TEMP.DATAIN
+CMP[2] => AC_ON.IN0
+window_open => FURNACE_ON.IN1
+window_open => AC_ON.IN1
+door_open => FURNACE_ON.IN1
+door_open => AC_ON.IN1
+FURNACE_ON <= FURNACE_ON.DB_MAX_OUTPUT_PORT_TYPE
+SYSTEM_AT_TEMP <= CMP[1].DB_MAX_OUTPUT_PORT_TYPE
+AC_ON <= AC_ON.DB_MAX_OUTPUT_PORT_TYPE
+BLOWER_ON <= BLOWER_ON.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LogicalStep_Lab3_top|SevenSegment:INST5

@@ -7,46 +7,46 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dN:/ECE124/Lab3/simulation/qsim
+dN:/ECE124/Lab3/simulation/qsim
 vLogicalStep_Lab3_top
-!s110 1581454833
+Z0 !s110 1583867053
 !i10b 1
-!s100 LN6YSa>]lYeRk>_n3j:cQ2
-IUHG4zok[G8556:kS1c?I`1
+!s100 9^G`5]UIkBY623F^o]4?j0
+I[O6@f:g7jEBXa6eT@Ia5z1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1581454833
+Z2 dN:/ECE-124/Lab3/simulation/qsim
+w1583867051
 8LogicalStep_Lab3_top.vo
 FLogicalStep_Lab3_top.vo
 L0 32
-Z2 OV;L;10.4b;61
+Z3 OV;L;10.4b;61
 r1
 !s85 0
 31
-!s108 1581454833.000000
+!s108 1583867052.000000
 !s107 LogicalStep_Lab3_top.vo|
 !s90 -work|work|LogicalStep_Lab3_top.vo|
 !i113 1
-Z3 o-work work
+Z4 o-work work
 n@logical@step_@lab3_top
 vLogicalStep_Lab3_top_vlg_vec_tst
-!s110 1581454834
-!i10b 1
-!s100 I<A<2_UGJ6Z^gzMDEkL802
-I8A>4060F@L;cN<;ncJlz33
-R1
 R0
-w1581454829
+!i10b 1
+!s100 ?@kmKZo4hHJ`VFGDlS<3G0
+I]1YYV:;Scd1;JY]626J8n0
+R1
+R2
+w1583867048
 8sim4.vwf.vt
 Fsim4.vwf.vt
 L0 30
-R2
+R3
 r1
 !s85 0
 31
-!s108 1581454834.000000
+!s108 1583867053.000000
 !s107 sim4.vwf.vt|
 !s90 -work|work|sim4.vwf.vt|
 !i113 1
-R3
+R4
 n@logical@step_@lab3_top_vlg_vec_tst

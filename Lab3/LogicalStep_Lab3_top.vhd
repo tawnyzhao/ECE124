@@ -52,6 +52,26 @@ architecture Energy_Monitor of LogicalStep_Lab3_top is
 			Target_Temp : out std_logic_vector(3 downto 0)
 		);
 	end component;
+	
+	component test_bench is port (
+			sw : in std_logic_vector(7 downto 0);
+			CMP: in std_logic_vector(2 downto 0);
+			MC_TESTMODE: in std_logic;
+			TEST_PASS : out std_logic
+	);
+	end component;
+	
+	component energy_monitor is 
+	port (
+      CMP: in std_logic_vector(2 downto 0);
+		window_open: in std_logic;
+		door_open: in std_logic;
+		FURNACE_ON : out std_logic;
+		SYSTEM_AT_TEMP : out std_logic;
+		AC_ON : out std_logic;
+		BLOWER_ON : out std_logic
+	);
+	end component;
 ------------------------------------------------------------------
 	
 	
@@ -83,14 +103,12 @@ architecture Energy_Monitor of LogicalStep_Lab3_top is
 	signal seg7_A		: std_logic_vector(6 downto 0);
 	signal seg7_B		: std_logic_vector(6 downto 0);
 	
-	--TestBench signals
-	signal AEQB, ALTB, AGTB		: std_logic;	
 	
 -- Here the circuit begins
 
 begin
 	--CONSTANT
-	Vacation_Temp <= "0010";
+	Vacation_Temp <= "0100";
 	--
 	Current_Temp <= sw(3 downto 0);
 	Desired_Temp <= sw(7 downto 4);
@@ -102,42 +120,6 @@ begin
 	
 	concat <= Target_Temp & Current_Temp;
 	
-	FURNACE_ON <= CMP(0) AND (NOT window_open) AND (NOT door_open);
-	SYSTEM_AT_TEMP <= CMP(1);
-	AC_ON <= CMP(2) AND (NOT window_open) AND (NOT door_open);
-	BLOWER_ON <= FURNACE_ON OR AC_ON; --TODO: check windows? Don't think we need to 
-	
-	Testbench1:
-	PROCESS (sw, AEQB, ALTB, AGTB, MC_TESTMODE) is 
-	
-	variable EQ_PASS, GT_PASS, LT_PASS	: std_logic := '0';
-	
-	begin
-		IF ((sw(3 downto 0) = sw(7 downto 4)) AND (AEQB = '1')) THEN
-		EQ_PASS:= '1';
-		GT_PASS:= '0';
-		LT_PASS:= '0';
-		
-		ELSIF ((sw(3 downto 0) > sw(7 downto 4)) AND (AGTB = '1')) THEN
-		EQ_PASS:= '0';
-		GT_PASS:= '1';
-		LT_PASS:= '0';	
-		
-		ELSIF ((sw(3 downto 0) < sw(7 downto 4)) AND (ALTB = '1')) THEN
-		EQ_PASS:= '0';
-		GT_PASS:= '0';
-		LT_PASS:= '1';	
-		
-		ELSE
-		EQ_PASS:= '0';
-		GT_PASS:= '0';
-		LT_PASS:= '0';
-	
-		END IF;
-		TEST_PASS <= MC_TESTMODE AND (EQ_PASS OR GT_PASS OR LT_PASS); --TODO: implement testbench	
-	end process;
-	
-	
 	-- Outputs
 	leds(0) <= FURNACE_ON;
 	leds(1) <= SYSTEM_AT_TEMP;
@@ -146,10 +128,12 @@ begin
 	leds(4) <= door_open;
 	leds(5) <= window_open;
 	leds(6) <= TEST_PASS;
-	leds(7) <= vacation_mode; --TODO: actually use vacation mode -- DONE
+	leds(7) <= vacation_mode;
 	
 	-- Create instances of components
 	INST1: compx4 port map(Current_Temp(3 downto 0), Target_Temp(3 downto 0), CMP(2 downto 0));
+	INST2: test_bench port map(sw(7 downto 0), CMP(2 downto 0), MC_TESTMODE, TEST_PASS);
+	INST3: energy_monitor port map(CMP(2 downto 0), window_open, door_open, FURNACE_ON, SYSTEM_AT_TEMP, AC_ON, BLOWER_ON);
 	INST5: SevenSegment port map(concat(3 downto 0), seg7_A);
 	INST6: SevenSegment port map(concat(7 downto 4), seg7_B);
 	INST7: segment7_mux port map(clkin_50, seg7_A, seg7_B, seg7_data, seg7_char2, seg7_char1);
