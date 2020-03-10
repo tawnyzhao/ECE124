@@ -6,7 +6,8 @@ pb[0] => leds[4].DATAIN
 pb[1] => FURNACE_ON.IN1
 pb[1] => AC_ON.IN1
 pb[1] => leds[5].DATAIN
-pb[2] => leds[6].DATAIN
+pb[2] => ~NO_FANOUT~
+pb[3] => Vacation_mode_mux:INST8.vacation_mode
 pb[3] => leds[7].DATAIN
 sw[0] => compx4:INST1.A[0]
 sw[0] => SevenSegment:INST5.hex[0]
@@ -16,31 +17,27 @@ sw[2] => compx4:INST1.A[2]
 sw[2] => SevenSegment:INST5.hex[2]
 sw[3] => compx4:INST1.A[3]
 sw[3] => SevenSegment:INST5.hex[3]
-sw[4] => compx4:INST1.B[0]
-sw[4] => SevenSegment:INST6.hex[0]
-sw[5] => compx4:INST1.B[1]
-sw[5] => SevenSegment:INST6.hex[1]
-sw[6] => compx4:INST1.B[2]
-sw[6] => SevenSegment:INST6.hex[2]
-sw[7] => compx4:INST1.B[3]
-sw[7] => SevenSegment:INST6.hex[3]
-leds[0] <= FURNACE_ON.DB_MAX_OUTPUT_PORT_TYPE
-leds[1] <= compx4:INST1.comparisons[1]
-leds[2] <= AC_ON.DB_MAX_OUTPUT_PORT_TYPE
-leds[3] <= BLOWER_ON.DB_MAX_OUTPUT_PORT_TYPE
-leds[4] <= pb[0].DB_MAX_OUTPUT_PORT_TYPE
-leds[5] <= pb[1].DB_MAX_OUTPUT_PORT_TYPE
-leds[6] <= pb[2].DB_MAX_OUTPUT_PORT_TYPE
-leds[7] <= pb[3].DB_MAX_OUTPUT_PORT_TYPE
-seg7_data[0] <= segment7_mux:INST7.DOUT[0]
-seg7_data[1] <= segment7_mux:INST7.DOUT[1]
-seg7_data[2] <= segment7_mux:INST7.DOUT[2]
-seg7_data[3] <= segment7_mux:INST7.DOUT[3]
-seg7_data[4] <= segment7_mux:INST7.DOUT[4]
-seg7_data[5] <= segment7_mux:INST7.DOUT[5]
-seg7_data[6] <= segment7_mux:INST7.DOUT[6]
-seg7_char1 <= segment7_mux:INST7.DIG1
-seg7_char2 <= segment7_mux:INST7.DIG2
+sw[4] => Vacation_mode_mux:INST8.Desired_Temp[0]
+sw[5] => Vacation_mode_mux:INST8.Desired_Temp[1]
+sw[6] => Vacation_mode_mux:INST8.Desired_Temp[2]
+sw[7] => Vacation_mode_mux:INST8.Desired_Temp[3]
+leds[0] << FURNACE_ON.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] << compx4:INST1.comparisons[1]
+leds[2] << AC_ON.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] << BLOWER_ON.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] << pb[0].DB_MAX_OUTPUT_PORT_TYPE
+leds[5] << pb[1].DB_MAX_OUTPUT_PORT_TYPE
+leds[6] << <GND>
+leds[7] << pb[3].DB_MAX_OUTPUT_PORT_TYPE
+seg7_data[0] << segment7_mux:INST7.DOUT[0]
+seg7_data[1] << segment7_mux:INST7.DOUT[1]
+seg7_data[2] << segment7_mux:INST7.DOUT[2]
+seg7_data[3] << segment7_mux:INST7.DOUT[3]
+seg7_data[4] << segment7_mux:INST7.DOUT[4]
+seg7_data[5] << segment7_mux:INST7.DOUT[5]
+seg7_data[6] << segment7_mux:INST7.DOUT[6]
+seg7_char1 << segment7_mux:INST7.DIG1
+seg7_char2 << segment7_mux:INST7.DIG2
 
 
 |LogicalStep_Lab3_top|compx4:INST1
@@ -216,5 +213,24 @@ DOUT[5] <= DOUT[5].DB_MAX_OUTPUT_PORT_TYPE
 DOUT[6] <= DOUT[6].DB_MAX_OUTPUT_PORT_TYPE
 DIG2 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
 DIG1 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Vacation_mode_mux:INST8
+Desired_Temp[0] => Target_Temp.DATAA
+Desired_Temp[1] => Target_Temp.DATAA
+Desired_Temp[2] => Target_Temp.DATAA
+Desired_Temp[3] => Target_Temp.DATAA
+Vacation_Temp[0] => Target_Temp.DATAB
+Vacation_Temp[1] => Target_Temp.DATAB
+Vacation_Temp[2] => Target_Temp.DATAB
+Vacation_Temp[3] => Target_Temp.DATAB
+vacation_mode => Target_Temp.OUTPUTSELECT
+vacation_mode => Target_Temp.OUTPUTSELECT
+vacation_mode => Target_Temp.OUTPUTSELECT
+vacation_mode => Target_Temp.OUTPUTSELECT
+Target_Temp[0] <= Target_Temp.DB_MAX_OUTPUT_PORT_TYPE
+Target_Temp[1] <= Target_Temp.DB_MAX_OUTPUT_PORT_TYPE
+Target_Temp[2] <= Target_Temp.DB_MAX_OUTPUT_PORT_TYPE
+Target_Temp[3] <= Target_Temp.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,0 +1,45 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- Takes in 'desired value' and PB for vacation mode
+-- Decides whether to output desired or vacation temp
+-- Output is target temp which is piped to top level VHD
+
+
+entity vac_mode is 
+	port (
+		Desired_Temp : in std_logic_vector(3 downto 0);
+		vacation_mode : in std_logic;
+		Target_Temp : out std_logic_vector(3 downto 0)
+	);
+end entity vac_mode;
+
+architecture vac_mode_logic of vac_mode is 
+	--Define components
+ 
+	--Define signals
+	signal vacation_temp : std_logic_vector(3 downto 0); -- pre-defined vacation temperature
+	
+begin
+	
+	vacation_temp <= '0100'
+	
+	INST1: compx1 port map(A(0), B(0), bit_results(0 to 2));
+	INST2: compx1 port map(A(1), B(1), bit_results(3 to 5));
+	INST3: compx1 port map(A(2), B(2), bit_results(6 to 8));
+	INST4: compx1 port map(A(3), B(3), bit_results(9 to 11));
+	
+	comparisons(2) <= (bit_results(11)) OR 
+			(bit_results(10) AND bit_results(8)) OR
+			(bit_results(10) AND bit_results(7) AND bit_results(5)) OR 
+			(bit_results(10) AND bit_results(7) AND bit_results(4) AND bit_results(2));
+			
+	comparisons(0) <= (bit_results(9)) OR 
+			(bit_results(10) AND bit_results(6)) OR
+			(bit_results(10) AND bit_results(7) AND bit_results(3)) OR 
+			(bit_results(10) AND bit_results(7) AND bit_results(4) AND bit_results(0));
+			
+	comparisons(1) <= (bit_results(10) AND bit_results(7) AND bit_results(4) AND bit_results(1));
+	
+end architecture vac_mode_logic;

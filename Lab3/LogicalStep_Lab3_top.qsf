@@ -47,9 +47,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name SOURCE_FILE LogicalStep_Lab3_top.vhd
-set_global_assignment -name SOURCE_FILE segment7_mux.vhd
-set_global_assignment -name SOURCE_FILE SevenSegment.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -77,7 +74,6 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
 set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
-set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS OFF
 set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
 set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE COMP IMAGE"
@@ -280,6 +276,11 @@ set_location_assignment PIN_15 -to aud_scl
 set_instance_assignment -name AUTO_OPEN_DRAIN_PINS ON -to seg7_data[1]
 set_instance_assignment -name AUTO_OPEN_DRAIN_PINS ON -to seg7_data[5]
 set_instance_assignment -name AUTO_OPEN_DRAIN_PINS ON -to seg7_data[6]
+set_global_assignment -name VHDL_FILE Vacation_mode_mux.vhd
+set_global_assignment -name VHDL_FILE LogicalStep_Lab3_top.vhd
+set_global_assignment -name VHDL_FILE Vacation_mode_logic.vhd
+set_global_assignment -name VHDL_FILE SevenSegment.vhd
+set_global_assignment -name VHDL_FILE segment7_mux.vhd
 set_global_assignment -name VHDL_FILE Compx1.vhd
 set_global_assignment -name VHDL_FILE Compx4.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/sim1.vwf
